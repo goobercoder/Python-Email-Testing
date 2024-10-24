@@ -3,7 +3,7 @@ from keys import *
 email = "goberbott@gmail.com"
 reciever = input("RECIEVER EMAIL: ")
 
-title = input("EMAIL TITLE: ")
+title = input("EMAIL SENT THROUGH GOOBERBOT ON DISCORD")
 message = input("EMAIL MESSAGE: ")
 
 text = f"Subject: {title}n\n\{message}"
