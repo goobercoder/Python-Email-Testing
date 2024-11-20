@@ -15,7 +15,7 @@ fun = {
 }
 
 discordurl = 'https://discord.com/api/webhooks/1304159442903765103/ggYRi-CJco2HpCQaOGycMGFo55gbfeGP6WRICGE6ebjlAuDJe1s4EIMkpkDy7Fu_5jhz'
-url = 'http://dog-api.kinduff.com/api/facts?number=5'
+url = 'http://dog-api.kinduff.com/api/facts?number=20'
 r = requests.get(url)
 print(r)
 #print(r.json())
@@ -32,7 +32,7 @@ for fact in f["facts"]:
 
 print(fun)
 
-# Send the payload to Discord webhook
+
 response = requests.post(discordurl, json=fun)
 print(response.status_code)
 print(response.text)
