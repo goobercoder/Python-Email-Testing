@@ -1,10 +1,13 @@
-import time
-while True:
-    print("#####", end= "\r")
-    time.sleep(0.1)
-    print("&&&&&", end= "\r")
-    time.sleep(0.1)
-    print("$$$$$", end= "\r")
-    time.sleep(0.1)
-    print("=====", end= "\r")
-    time.sleep(0.1)
+def function(func):
+    def wrapper():
+        print("hello")
+        func()
+        print("onain")
+    return wrapper
+
+@function
+def goog():
+    print("goog")
+
+
+goog()
