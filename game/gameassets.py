@@ -17,3 +17,11 @@ def y():
     print("you answer to these options with their corresponding number.")
     time.sleep(1.7)
     input("ready to start?: ")
+def isdead(x, y):
+    if x == 0:
+        print("you died.")
+        time.sleep(1)
+        print(f"your stats as you die are:\n{y}")
+        return True
+    else:
+        return False

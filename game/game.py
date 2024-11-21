@@ -11,6 +11,9 @@ class you:
         self.home = home
         self.strength = strength
         self.money = 100
+    def __str__(self) -> str:
+        return f"name: {c.name}\nage: {c.age}\nhp: {c.hp}\nstrength: {c.strength}\ngender: {c.gender}\nhome: {c.home}\nmoney: {c.money}\ndifficulty: {difficulty}"
+        
 class npc:
     def __init__(self, name = None, hp = 100, strength = 20, age = 0, gender = "undefined", home = "undefined"):
         self.name = name
@@ -67,7 +70,30 @@ while True:
         print("not a number")
 if drink == 1 or drink == 2 or drink == 3 or drink == 4:
     drink = int(drink)
+    if drink == 1: 
+        print("you chose water")
+        time.sleep(1)
+        print("you will gain 5 health.")
+        c.hp += 5
+    elif drink == 2: 
+        print("you chose beer")
+        time.sleep(1)
+        print("you will lose 5 health.")
+        c.hp -= 5
+    elif drink == 3: 
+        print("you chose wine")
+        time.sleep(1)
+        print("you will gain 10 health.")
+        c.hp += 10
+    else: 
+        print("you chose soda")
+        time.sleep(1)
+        print("you will lose 10 health.")
+        c.hp -= 10
+    
 else:
     print("not one of the options, you get no drink.")
     drink = 0
-    
+isdead(c.hp, c)
+time.sleep(1)
+
