@@ -62,6 +62,8 @@ time.sleep(1)
 print("you go and sit down and order a drink, but what drink?")
 time.sleep(1)
 print("1. water.\n2. beer.\n3. wine.\n4. soda.")
+time.sleep(1)
+print("every item costs 3 money.")
 while True:
     try:
         drink = int(input("what do you choose?: "))
@@ -70,6 +72,7 @@ while True:
         print("not a number")
 if drink == 1 or drink == 2 or drink == 3 or drink == 4:
     drink = int(drink)
+    c.money -= 3
     if drink == 1: 
         print("you chose water")
         time.sleep(1)
@@ -90,10 +93,10 @@ if drink == 1 or drink == 2 or drink == 3 or drink == 4:
         time.sleep(1)
         print("you will lose 10 health.")
         c.hp -= 10
-    
 else:
     print("not one of the options, you get no drink.")
     drink = 0
 isdead(c.hp, c)
+
 time.sleep(1)
 

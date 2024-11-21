@@ -1,11 +1,11 @@
 import time
 def load():
     time.sleep(1)
-    print("loading.")
+    print("loading.", end="\r")
     time.sleep(1)
-    print("loading..")
+    print("loading..", end="\r")
     time.sleep(0.5)
-    print("loading...")
+    print("loading...", end="\r")
     time.sleep(0.5)
 def y():
     print("so, this is where your adventure starts. get ready!")
@@ -22,6 +22,6 @@ def isdead(x, y):
         print("you died.")
         time.sleep(1)
         print(f"your stats as you die are:\n{y}")
-        return True
+        exit()
     else:
-        return False
+        print(f"your hp is: {x}")
